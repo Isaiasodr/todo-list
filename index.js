@@ -38,7 +38,7 @@ app.get("/", (req, res) => {
 app.use(express.static("public"));
 
 conn
-  .sync(/* { force: true } */)
+  .sync({ force: true })
   .then(() => {
     app.listen(port);
   })
